@@ -52,7 +52,7 @@ function resetGame() {
     o.x = Math.random() * (canvas.width - o.width);
     o.y = canvas.height - o.height;
     o.speed = 3;
-    o.direction = 1;
+    o.direction = o.direction;
     }
     level = 1;
     timer = 0;
