@@ -21,18 +21,18 @@ let player = {
     vy: 0
 }
 //obstacles aka red enimies
-function obstacle(x, y, width, height, speed) {
+function obstacle(x, y, width, height, speed, direction) {
     this.x = x;
     this.y =  y;
     this.width = width;
     this.height = height;
     this.speed = speed;
-    this.direction = 1; // 1 = right -1 = left
+    this.direction = direction; // 1 = right -1 = left
 };
 let obstacles = [];
 
-obstacles.push (new obstacle(800, canvas.height - 400, 50, 50, 3));
-obstacles.push (new obstacle(canvas.width / 2 + 100, canvas.height - 50, 50, 50, 3));
+obstacles.push (new obstacle(800, canvas.height - 400, 50, 50, 3, 1));
+obstacles.push (new obstacle(canvas.width / 2 + 100, canvas.height - 50, 50, 50, 3, -1));
 
 const keys = {};
 const gravity = 0.5;
