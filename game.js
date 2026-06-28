@@ -53,10 +53,9 @@ function resetGame() {
     o.y = canvas.height - o.height;
     o.speed = 3;
     o.direction = 1;
-
+    }
     level = 1;
     timer = 0;
-    }
 }
 
 //particle system
@@ -201,7 +200,7 @@ function gameLoop() {
     timer++;
     if (timer % 300 === 0) {
         level++;
-        for (let o of objects) {
+        for (let o of obstacles) {
             o.speed += 2;
         }
         console.log("level:", level);
