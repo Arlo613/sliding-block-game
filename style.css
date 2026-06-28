@@ -1,0 +1,14 @@
+#game {
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    display: block;
+    overflow: hidden;
+
+    box-shadow: 0 0 20px cyan inset, 0 0 20px cyan;
+}
+html, body {
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+}
