@@ -204,6 +204,7 @@ function gameLoop() {
             o.speed += 2;
         }
         console.log("level:", level);
+        console.log("obstacle speed:", o.speed);
     } //every 5 second
 
     let prevBottom = player.y + player.height;
@@ -274,10 +275,14 @@ function gameLoop() {
     for (o of obstacles) {
         o.x += o.speed * o.direction;
 
-        if (o.x + o.width > canvas.width) o.direction = -1;
-        if (o.x < 0) o.direction = 1;
-    }
-
+        if (o.x + o.width > canvas.width) {
+            o.x = canvas.width - o.width;
+            o.direction = -1;
+        }
+        if (o.x < 0) {
+            o.x = 0;
+            o.direction = 1;
+        }
 
     //moving platforms
     for (let i = 0; i < platforms.length; i++) {
