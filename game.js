@@ -201,9 +201,10 @@ function gameLoop() {
     timer++;
     if (timer % 300 === 0) {
         level++;
-        obstacles.speed += 2;
+        for (let o of objects) {
+            o.speed += 2;
+        }
         console.log("level:", level);
-
     } //every 5 second
 
     let prevBottom = player.y + player.height;
