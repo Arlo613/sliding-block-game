@@ -201,7 +201,7 @@ function gameLoop() {
     timer++;
     if (timer % 300 === 0) {
         level++;
-        obstacle.speed += 2;
+        obstacles.speed += 2;
         console.log("level:", level);
 
     } //every 5 second
