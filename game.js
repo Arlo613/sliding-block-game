@@ -283,6 +283,7 @@ function gameLoop() {
             o.x = 0;
             o.direction = 1;
         }
+    }
 
     //moving platforms
     for (let i = 0; i < platforms.length; i++) {
